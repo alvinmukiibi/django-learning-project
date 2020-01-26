@@ -4,7 +4,8 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def home_view(*args, **kwargs):
+def home_view(request, *args, **kwargs):
+    print(request.user)  # accessing the authenticated user on the request object
     return HttpResponse("<h1>Hello World</h1>")
 
 
