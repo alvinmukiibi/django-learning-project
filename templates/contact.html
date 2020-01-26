@@ -9,7 +9,13 @@
 
     <ul>
         {% for item in my_list  %}
-            <li> {{ forloop.counter  }} - {{ item }} </li>
+            {% if item == 4  %}
+                <li> {{ forloop.counter }} -- {{ item|add:8 }} </li>
+            {% elif item == 'Hi' %}
+                <li>This is not the network</li>
+            {% else %}
+                <li> {{ forloop.counter  }} - {{ item }} </li>
+            {% endif %}
         {% endfor %}
 
         
