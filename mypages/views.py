@@ -17,6 +17,6 @@ def contact_view(request, *args, **kwargs):
     my_context = {
         "my_text": "This is a context value being passed in using a dictionary",
         "my_number": 246,
-        "my_list": [12, 34, 12, 44]
+        "my_list": [12, 34, 12, 44, "Hi"]
     }
     return render(request, 'contact.html', my_context)
