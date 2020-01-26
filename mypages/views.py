@@ -15,8 +15,9 @@ def home_view(request, *args, **kwargs):
 def contact_view(request, *args, **kwargs):
     # return HttpResponse("<h1>Contact page</h1>")
     my_context = {
-        "my_text": "This is a context value being passed in using a dictionary",
+        "my_text": "context value being shown",
         "my_number": 246,
-        "my_list": [2, 3, 4, 5, "Hi"]
+        "my_list": [2, 3, 4, 5, "Hi"],
+        "my_html": "<h2>This is html</h2>"
     }
     return render(request, 'contact.html', my_context)

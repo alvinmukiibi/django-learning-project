@@ -5,8 +5,8 @@
     <h1>Contact page</h1>
     <p>This is a paragraph</p>
 
-    <p> {{ my_text }}, {{ my_number }}  </p>
-
+    <p> {{ my_text|capfirst|upper }}, {{ my_number }}  </p>
+    {{ my_html|safe|title|slugify }}
     <ul>
         {% for item in my_list  %}
             {% if item == 4  %}
